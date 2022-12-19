@@ -90,6 +90,7 @@ pub fn load_apps() {
         let dst = unsafe { core::slice::from_raw_parts_mut(base_i as *mut u8, src.len()) };
         dst.copy_from_slice(src);
     }
+    println!("[kernel] load app!");
 }
 
 /// get app info with entry and sp and save `TrapContext` in kernel stack
